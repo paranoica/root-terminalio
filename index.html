@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport"
+            content="width=device-width, initial-scale=1, maximum-scale=1 ,user-scalable=0, viewport-fit=cover" />
+
+        <title>Terminalio - personal website</title>
+        <meta name="theme-color" content="#f6d4b1" />
+        <link rel="icon" type="image/png" href="/icons/32x32.png" />
+
+        <meta name="description" content="
+                    My name is Melnikov Dmitry. This is my personal website - porfolio. I have a passion
+                    for all techonlogy and design things, from software engineering & machine learning to 3D graphics.
+                " />
+
+        <meta name="mobile-web-app-capable" content="yes" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/180x180.png" />
+
+        <meta name="apple-mobile-web-app-title" content="Terminalio - personal website" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta property="og:title" content="Terminalio - personal website" />
+        <meta property="og:type" content="website" />
+
+        <meta name="og:description" content="
+                    My name is Melnikov Dmitry. This is my personal website - porfolio. I have a passion
+                    for all techonlogy and design things, from software engineering & machine learning to 3D graphics.
+                " />
+
+        <link rel="manifest" href="/manifest.json" />
+        <script type="module" src="/src/main.ts"></script>
+    </head>
+    <body>
+        <div id="home"></div>
+        <canvas class="webgl"></canvas>
+
+        <div id="hero-backup">
+            <h3>Hello everyone!</h3>
+            <h1>I’m Dmitry Melnikov</h1>
+            <ul>
+                <li>Software Engineer</li>
+                <li>Fullstack Developer</li>
+            </ul>
+        </div>
+
+        <nav>
+            <div class="menu-btn">
+                <button class="btn" onclick="toggleMenu()">
+                    <svg width="16" height="16">
+                        <rect class="st0" width="16" height="3.2" />
+                        <rect y="6.4" class="st0" width="16" height="3.2" />
+                        <rect y="12.8" class="st0" width="16" height="3.2" />
+                    </svg>
+                </button>
+                <div style="display: flex">
+                    <a class="btn" href="https://github.com/paranoica/" target="_blank">
+                        <svg width="16" height="16">
+                            <path d="M10.6,12.9c0-1-0.3-1.6-0.7-2c2.4-0.3,4.9-1.1,4.9-5.2c0-1.1-0.4-2.1-1.1-2.9c0.1-0.3,0.5-1.3-0.1-2.8
+                        c0,0-0.9-0.3-3,1.1c-1.7-0.5-3.6-0.5-5.4,0c-2-1.4-3-1.1-3-1.1C1.6,1.4,2,2.5,2.1,2.8C1.4,3.5,1,4.6,1,5.6c0,4.1,2.5,5,4.9,5.3
+                        c-0.4,0.4-0.6,0.9-0.7,1.4c-0.6,0.3-2.2,0.7-3.1-0.9c0,0-0.6-1-1.6-1.1c0,0-1.1,0-0.1,0.7c0,0,0.7,0.3,1.1,1.6c0,0,0.6,2.1,3.6,1.5
+                        c0,0.9,0,1.8,0,1.8h5.3C10.6,15.9,10.6,14.4,10.6,12.9z" />
+                        </svg>
+                    </a>
+                    <a class="btn" href="https://t.me/earlyshot/" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.2881.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+                        </svg>
+                    </a>
+                    <a class="btn" href="https://www.linkedin.com/in/paranoica/" target="_blank">
+                        <svg width="16" height="16">
+                            <path d="M0.1,2c0-1,0.8-1.8,1.9-1.8c1,0,1.8,0.9,1.8,1.8c0,1-0.8,1.9-1.8,1.9C0.9,3.9,0.1,3.1,0.1,2z M0.1,5h3.7v9.8 H0.1V5z" />
+                            <path d="M15.9,8.5v6.2h-3.5V9.4c0-0.9-0.6-1.6-1.5-1.6c-0.8,0-1.4,0.6-1.4,1.5v5.5H5.8V5h3.7v1c0.6-0.7,1.6-1.2,2.8-1.2C14.4,4.7,15.9,6.3,15.9,8.5z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="menu-body" onclick="closeMenu()">
+                <a href="#home" onclick="closeMenu()">Home</a>
+                <a href="#aboutMe" onclick="closeMenu()">About</a>
+                <a href="#experience" onclick="closeMenu()">Experience</a>
+                <a href="#contact" onclick="closeMenu()">Contacts</a>
+            </div>
+        </nav>
+
+        <main>
+            <section>
+                <h1 id="aboutMe">Hello everyone!</h1>
+                <p>My name is Melnikov Dmitry, I’m a software & fullstack engineer.</p>
+                <p>I have a passion for all things technology and design, from software engineering & machine learning to 3D graphics.</p>
+                <p>Below are details and information of my commercial experience.</p>
+            </section>
+
+            <section>
+                <h1 id="experience">Experience</h1>
+                <hr/>
+
+                <h2>Fullstack Engineer</h2>
+                <h3>Sanvivo</h3>
+                <h3>2023-24</h3>
+                <ul class="skills">
+                    <li>TypeScript</li><li>JavaScript</li><li>Python</li><li>PostgreSQL</li>
+                    <li>Node.js</li><li>Nest.js</li><li>Django</li><li>FastAPI</li><li>Flask</li><li>RestAPI</li>
+                    <li>Docker</li><li>Kubernetes</li><li>Redis</li><li>Github Actions</li>
+                </ul>
+                <p>
+                    • Developed and implemented a web platform for automating pharmacy processe: order, warehouse and supply management.<br/>
+                    • Integrated supplier availability and pricing services via external APIs.<br/>
+                    • Configured a CI/CD pipeline (Docker + GitHub Actions) ensuring stable deployment without downtime.<br/>
+                    • Developed and presented findings and solutions to audiences including senior executives and stakeholders.
+                </p>
+                <hr/>
+
+                <h2>Backend & Lua Developer</h2>
+                <h3>chernobyl.cc</h3>
+                <h3>Oct 2019 - Sep 2022</h3>
+                <ul class="skills">
+                    <li>C++</li><li>Lua</li><li>LuaJIT</li><li>TypeScript</li><li>Python</li><li>JSON</li><li>Asynchronyos tools</li>
+                    <li>SQL</li><li>WebSockets</li><li>RestAPI</li><li>Obfuscation utilities</li><li>Anti-tamper tools-methodics</li>
+                </ul>
+                <p>
+                    • Conducted code reviews and implemented Lua scripting standards, improving the readability and quality of code for the entire team.<br/>
+                    • Developed a synchronization system between all users of the service with minimal delta.<br/>
+                    • Created a security system against deobfuscation, file modification and memory dumping.
+                </p>
+                <hr/>
+
+                <h2>Fullstack Developer & Security Engineer</h2>
+                <h3>Gamesense.pub</h3>
+                <h3>May 2019 - Jun 2021</h3>
+                <ul class="skills">
+                    <li>C++</li><li>Assembler</li><li>WinAPI</li><li>WDK</li><li>Websockets</li><li>RestAPI</li>
+                    <li>SQL</li><li>Node.js</li><li>Nest.js</li><li>Python</li><li>OpenSSL</li>
+                </ul>
+                <p>
+                    • Implemented multi-layer security mechanisms against cracking, memory dumping and unauthorized reverse engineering.<br/>
+                    Created anti-debug and anti-injection measures to prevent runtime analysis.<br/>
+                    • Developed a protected C++ loader communicating with a backend authorization server.<br/>
+                    • Integrated encryption and signature validation for all client-server data exchanges.<br/>
+                    • Built a web control panel for managing user access, license keys, and telemetry of client security events.
+                </p>
+                <hr/>
+
+                <h2>Software Engineer</h2>
+                <h3>Neverlose.cc</h3>
+                <h3>Jul 2018 - Oct 2022</h3>
+                <ul class="skills">
+                    <li>C++</li><li>Assembler</li><li>WinAPI</li><li>WDK</li><li>Websockets</li><li>RestAPI</li><li>Multithreading</li>
+                    <li>SQL</li><li>Lua</li><li>LuaJIT</li><li>Python</li><li>OpenSSL</li><li>Reverse Engineering Tools</li>
+                </ul>
+                <p>
+                    • Optimized C++ modules, reducing system resource usage by up to 60% while maintaining stability.<br/>
+                    • Implemented a high-performance user-level driver with secure bypass of security systems, reducing false positives by 40%.<br/>
+                    • Integrated LuaJIT module witha user-friendly API system.
+                </p>
+            </section>
+
+            <section>
+                <h1 id="contact">Contacts</h1>
+                <p style="text-align: center">
+                    Reach out on <a href="https://www.github.com/paranoica/" target="_blank"><u><b>Github</b></u></a><br>
+                    Reach out on <a href="https://t.me/earlyshot/" target="_blank"><u><b>Telegram</b></u></a><br>
+                    Reach out on <a href="https://www.linkedin.com/in/paranoica/" target="_blank"><u><b>LinkedIn</b></u></a><br><br>
+
+                    My bilingual CV: <a href="https://drive.google.com/file/d/18iVHUYtLeP1eR0Gf8SXBs1nJyxtRi3DS/view?usp=sharing" target="_blank"><u><b>Link</b></u></a><br>
+                    My email: <b>mitjumper@gmail.com</b>
+                </p>
+            </section>
+        </main>
+
+        <input type="text" id="textarea" readonly />
+        <div id="loading">
+            <h2>Booting...</h2>
+            <div id="loading-bar">
+                <div id="loading-bar-progress"></div>
+            </div>
+            <div id="loading-items">Starting...</div>
+        </div>
+        <footer>
+            <div>Computer design based on the Commodore PET 8296.</div>
+        </footer>
+        <script>
+            function closeMenu() {
+                document.getElementsByTagName("nav")[0].classList.remove(["active"]);
+            }
+
+            function toggleMenu() {
+                const nav = document.getElementsByTagName("nav")[0];
+                if (nav.classList.contains("active")) {
+                    nav.classList.remove(["active"]);
+                } else {
+                    nav.classList.add("active");
+                }
+            }
+        </script>
+        <script fetchpriority="high" src="https://cdn-ts.netlify.app/webgl-helper@3.0.11/webgl-helper.min.js"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDNKHGV4HB"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-EDNKHGV4HB");
+            gtag("event", "origin", { name: window.origin });
+        </script>
+    </body>
+</html>
